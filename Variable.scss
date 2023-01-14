@@ -1,0 +1,35 @@
+// _Variable.scss
+
+$Athiti-font: 'Athiti', sans-serif;
+$Merienda-font:'Merienda', cursive;
+
+$size-defaut : 18px;
+$size-Titre-pages : 30px;
+$size-Sous-rubriques : 25px;
+$size-Titre-menus : 20px;
+$size-Prix-menus : 50px;
+$size-Texte-sous-menus : 15px;
+$size-Titres-pied-page : 18px;
+
+$color-Blanc : white;
+$color-Noir : black;
+$color-Marron : #4c4343;
+$color-Beige : #ebe3db;
+$color-Rouge : #950000;
+
+$breakpoints: (
+ mobile: 780px,
+ desktop: 980px
+);
+
+@mixin mobile {
+ @media screen and (min-width: map-get($breakpoints, mobile)){
+ @content;
+ }
+}
+@mixin desktop {
+ @media screen and (min-width: map-get($breakpoints, desktop)){
+     max-width: 1400px;
+ @content;
+ }
+}
